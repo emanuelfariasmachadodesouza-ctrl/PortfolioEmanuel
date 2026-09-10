@@ -1,0 +1,703 @@
+/* ==================================
+   CONFIGURAÇÕES GERAIS
+================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #111827;
+    color: #f3f4f6;
+
+    line-height: 1.6;
+}
+
+
+/* ==================================
+   CABEÇALHO
+================================== */
+
+.cabecalho {
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+
+    background-color: #1f2937;
+}
+
+.logo {
+    color: #22d3ee;
+
+    text-decoration: none;
+
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+
+/* ==================================
+   MENU
+================================== */
+
+.menu {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.menu a {
+    display: block;
+
+    padding: 8px;
+
+    color: white;
+
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: #22d3ee;
+}
+
+.menu a:focus-visible {
+    outline: 3px solid #facc15;
+    outline-offset: 3px;
+}
+
+
+/* ==================================
+   HERO - MOBILE
+================================== */
+
+.hero {
+    padding: 60px 20px;
+
+    text-align: center;
+
+    background-color: #111827;
+}
+
+.hero-texto {
+    max-width: 700px;
+
+    margin: auto;
+}
+
+.etiqueta {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    background-color: #172554;
+
+    color: #22d3ee;
+
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 2rem;
+
+    line-height: 1.2;
+}
+
+.hero p {
+    color: #d1d5db;
+}
+
+
+/* ==================================
+   BOTÃO
+================================== */
+
+.botao {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 12px 20px;
+
+    background-color: #2563eb;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+}
+
+.botao:hover {
+    background-color: #1d4ed8;
+}
+
+
+/* ==================================
+   SEÇÕES
+================================== */
+
+.secao {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 60px 20px;
+}
+
+.secao h2 {
+    font-size: 1.8rem;
+}
+
+.secao p {
+    color: #d1d5db;
+}
+
+
+/* ==================================
+   CARDS - MOBILE
+================================== */
+
+.cards {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    margin-top: 30px;
+}
+
+.card {
+    padding: 25px;
+
+    background-color: #1f2937;
+
+    border: 1px solid #374151;
+
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin-top: 0;
+
+    color: #22d3ee;
+}
+
+.card a {
+    color: #22d3ee;
+
+    font-weight: bold;
+}
+
+
+/* ==================================
+   FORMULÁRIO
+================================== */
+
+form {
+    max-width: 500px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+input {
+    padding: 12px;
+
+    border: 2px solid #4b5563;
+
+    border-radius: 5px;
+
+    background-color: #111827;
+
+    color: white;
+
+    font-size: 1rem;
+}
+
+button {
+    width: fit-content;
+
+    margin-top: 10px;
+
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background-color: #2563eb;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid #facc15;
+    outline-offset: 3px;
+}
+
+
+/* ==================================
+   RODAPÉ
+================================== */
+
+.rodape {
+    padding: 30px 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    text-align: center;
+
+    background-color: #1f2937;
+}
+
+.rodape a {
+    color: #22d3ee;
+
+    text-decoration: none;
+}
+
+
+/* ==================================
+   1º PONTO DE CORTE
+   Encontrado para telas maiores
+================================== */
+
+@media (min-width: 700px) {
+
+    .cabecalho {
+        padding: 20px 5%;
+
+        flex-direction: row;
+
+        justify-content: space-between;
+
+        align-items: center;
+    }
+
+    .menu {
+        flex-direction: row;
+
+        gap: 20px;
+    }
+
+    .hero {
+        padding: 100px 40px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .rodape {
+        flex-direction: row;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+        padding: 30px 5%;
+    }
+}
+
+
+/* ==================================
+   2º PONTO DE CORTE
+   Para telas grandes
+================================== */
+
+@media (min-width: 1000px) {
+
+    .hero {
+        min-height: 500px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .secao {
+        padding: 90px 40px;
+    }
+}
+
+
+/* ==================================
+   REDUÇÃO DE MOVIMENTO
+================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+/* =================================
+   CONFIGURAÇÕES GERAIS
+================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #111827;
+
+    color: #f3f4f6;
+
+    line-height: 1.6;
+}
+
+
+/* =================================
+   CABEÇALHO
+================================= */
+
+.cabecalho {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 5%;
+
+    background-color: #1f2937;
+}
+
+.logo {
+    color: #22d3ee;
+
+    font-size: 1.4rem;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+
+/* =================================
+   MENU
+================================= */
+
+.menu {
+    display: flex;
+
+    gap: 20px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.menu a {
+    color: white;
+
+    text-decoration: none;
+
+    padding: 8px;
+}
+
+.menu a:hover {
+    color: #22d3ee;
+}
+
+.menu a:focus-visible {
+    outline: 3px solid #facc15;
+
+    outline-offset: 3px;
+}
+
+
+/* =================================
+   REGRA PRINCIPAL DAS IMAGENS
+================================= */
+
+/*
+   Todas as imagens:
+
+   max-width: 100%;
+   height: auto;
+
+   Isso impede que a imagem ultrapasse
+   o tamanho do seu elemento pai.
+*/
+
+img {
+    max-width: 100%;
+    height: auto;
+
+    display: block;
+}
+
+
+/* =================================
+   HERO
+================================= */
+
+.hero {
+    padding: 80px 5%;
+
+    text-align: center;
+
+    background-color: #111827;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 700px;
+
+    margin: auto;
+
+    color: #d1d5db;
+}
+
+
+/* =================================
+   GALERIA
+================================= */
+
+.galeria {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 70px 5%;
+}
+
+.galeria h2 {
+    font-size: 2rem;
+
+    margin-bottom: 30px;
+}
+
+
+/* =================================
+   GRID DE IMAGENS
+================================= */
+
+.grid-imagens {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+}
+
+
+/* =================================
+   FIGURE
+================================= */
+
+figure {
+    margin: 0;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background-color: #1f2937;
+
+    border: 1px solid #374151;
+}
+
+
+/* Imagem dentro do figure */
+
+figure img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* Legenda */
+
+figcaption {
+    padding: 15px;
+
+    color: #d1d5db;
+
+    font-weight: bold;
+}
+
+
+/* =================================
+   SOBRE
+================================= */
+
+.sobre {
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 70px 5%;
+}
+
+.sobre h2 {
+    font-size: 2rem;
+}
+
+.sobre p {
+    color: #d1d5db;
+}
+
+
+/* =================================
+   CONTATO
+================================= */
+
+.contato {
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 70px 5%;
+}
+
+.contato p {
+    color: #d1d5db;
+}
+
+
+/* =================================
+   BOTÃO
+================================= */
+
+.botao {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 12px 22px;
+
+    background-color: #2563eb;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+}
+
+.botao:hover {
+    background-color: #1d4ed8;
+}
+
+.botao:focus-visible {
+    outline: 3px solid #facc15;
+
+    outline-offset: 3px;
+}
+
+
+/* =================================
+   RODAPÉ
+================================= */
+
+.rodape {
+    padding: 30px 5%;
+
+    text-align: center;
+
+    background-color: #1f2937;
+
+    color: #d1d5db;
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (min-width: 700px) {
+
+    .grid-imagens {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =================================
+   COMPUTADOR
+================================= */
+
+@media (min-width: 1000px) {
+
+    .grid-imagens {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
